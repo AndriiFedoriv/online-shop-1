@@ -23,23 +23,24 @@ class ProductList {
                          ? a.price - b.price
                          : b.price - a.price)
       .forEach(product => {
-      productListDomString += `<div class="card w-100% text-dark bg-light">
-                  <div class="card product">
-                   <div class="card-body">
-                      <h5 class="card-title">${product.title}</h4>
-                      <p class="card-text text-truncate">${product.description}</p>
-                      <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                        <button class="btn btn-light" data-bs-toggle="modal"
-                          data-bs-target="#productInfoModal" data-id="${product.id}">Детально
-                        </button>
-                        <button class="btn btn-outline-success buy" data-id="${product.id}">
-                          ${product.price} грн. В кощик
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>`;
-    });
+        productListDomString += `<div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+        <div class="card product">
+         
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">${product.title}</h5>
+            <p class="card-text flex-fill text-truncate">${product.description}</p>
+            <div class="d-flex justify-content-around">
+              <button class="btn btn-info" data-bs-toggle="modal"
+                data-bs-target="#productInfoModal" data-id="${product.id}">Info
+              </button>
+              <button class="btn btn-primary buy" data-id="${product.id}">
+                $${product.price} - Buy
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>`;
+});
     this.container.innerHTML = productListDomString;
   }
   async addEventListeners() {
