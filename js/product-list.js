@@ -25,7 +25,6 @@ class ProductList {
       .forEach(product => {
         productListDomString += `<div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
         <div class="card product">
-         
           <div class="card-body d-flex flex-column">
             <h5 class="card-title">${product.title}</h5>
             <p class="card-text flex-fill text-truncate">${product.description}</p>
