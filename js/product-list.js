@@ -23,19 +23,17 @@ class ProductList {
                          ? a.price - b.price
                          : b.price - a.price)
       .forEach(product => {
-      productListDomString += `<div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+      productListDomString += `<div class="card w-100%">
                   <div class="card product">
-                    <img class="card-img-top" src="${product.image}" 
-                        alt="${product.title}">
-                    <div class="card-body d-flex flex-column">
+                   <div class="card-body">
                       <h4 class="card-title">${product.title}</h4>
-                      <p class="card-text flex-fill">${product.description}</p>
+                      <p class="card-text">${product.description}</p>
                       <div class="d-flex justify-content-around">
                         <button class="btn btn-info" data-bs-toggle="modal"
-                          data-bs-target="#productInfoModal" data-id="${product.id}">Info
+                          data-bs-target="#productInfoModal" data-id="${product.id}">Детально
                         </button>
                         <button class="btn btn-primary buy" data-id="${product.id}">
-                          $${product.price} - Buy
+                          ${product.price} грн. Купити
                         </button>
                       </div>
                     </div>
