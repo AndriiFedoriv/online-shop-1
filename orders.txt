@@ -8,3 +8,4 @@
 {"clientName":"John","clientEmail":"john@wall.com","cart":{}}
 {"clientName":"John","clientEmail":"john@wall.com","cart":{}}
 
+{"clientName":"Andrii","clientEmail":"virnistu@gmail.com","cart":{"2":1,"229":1}}
