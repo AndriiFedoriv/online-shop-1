@@ -112,7 +112,7 @@ class Cart {
     const form = this.cartContainer.querySelector('.form-contacts');
     if (form.checkValidity()) {
       ev.preventDefault();
-      fetch('order', {
+      fetch('/email/:address', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
